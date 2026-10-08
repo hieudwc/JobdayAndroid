@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/startupFragment">
+
+    <fragment
+        android:id="@+id/startupFragment"
+        android:name="vn.jobday.app.startup.StartupFragment"
+        android:label="Startup" />
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="vn.jobday.app.onboarding.WelcomeFragment"
+        android:label="Welcome">
+
+        <action
+            android:id="@+id/action_welcomeFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="vn.jobday.feature.auth.AuthFragment"
+        android:label="Authentication">
+
+        <argument
+            android:name="accountType"
+            android:defaultValue="CANDIDATE"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="vn.jobday.feature.home.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/candidateNameFragment"
+        android:name="vn.jobday.feature.auth.onboarding.CandidateNameFragment"
+        android:label="Candidate onboarding" />
+
+</navigation>

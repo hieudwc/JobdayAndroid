@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@id/authPhoneFragment">
+
+    <fragment
+        android:id="@+id/authPhoneFragment"
+        android:name="vn.jobday.feature.auth.phone.PhoneLoginFragment"
+        android:label="Đăng nhập">
+
+        <argument
+            android:name="accountType"
+            android:defaultValue="CANDIDATE"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_authPhoneFragment_to_authOtpFragment"
+            app:destination="@id/authOtpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authOtpFragment"
+        android:name="vn.jobday.feature.auth.otp.OtpFragment"
+        android:label="Xác thực OTP">
+
+        <argument
+            android:name="challengeId"
+            app:argType="string" />
+
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+
+        <argument
+            android:name="accountType"
+            app:argType="string" />
+
+        <argument
+            android:name="retryAfterSeconds"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="debugOtp"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>

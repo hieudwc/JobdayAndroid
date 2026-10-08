@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Jobdayandroid" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/jobday_primary</item>
+        <item name="colorOnPrimary">@color/jobday_on_primary</item>
+        <item name="colorSecondary">@color/jobday_primary</item>
+        <item name="android:colorAccent">@color/jobday_primary</item>
+    </style>
+
+    <style name="Theme.Jobdayandroid" parent="Base.Theme.Jobdayandroid" />
+</resources>

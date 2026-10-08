@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_search_hint">Tìm kiếm theo ngành nghề</string>
+    <string name="home_voice_search">Tìm kiếm bằng giọng nói</string>
+    <string name="home_create_cv">Tạo CV</string>
+    <string name="home_jobs">Việc làm</string>
+    <string name="home_company">Công ty</string>
+    <string name="home_accessibility">Trợ năng</string>
+    <string name="home_nearby_jobs">Khám phá việc làm gần bạn</string>
+    <string name="home_suggested_jobs">Gợi Ý Việc Làm</string>
+    <string name="home_see_all">Xem tất cả</string>
+    <string name="home_job_title_one">Nhân Viên Telesales / Chăm Sóc Khách Hàng / Tư Vấn Viên</string>
+    <string name="home_company_one">CÔNG TY CP VIỄN THÔNG SỐ</string>
+    <string name="home_location_one">Hà Tây, Hà Nội</string>
+    <string name="home_job_title_two">Giáo Viên Dạy Nhạc Cụ Dân Tộc/ Dạy Đàn Piano</string>
+    <string name="home_company_two">TRUNG TÂM THEPIANO</string>
+    <string name="home_location_two">Tây Hồ, Hà Nội</string>
+    <string name="home_remote">Làm việc từ xa</string>
+    <string name="home_job_title_three">Nhân Viên Xoa Bóp Bấm Huyệt / Vật Lý Trị Liệu</string>
+    <string name="home_company_three">HỘI NGƯỜI MÙ QUẬN ĐỐNG ĐA</string>
+    <string name="home_location_three">Đống Đa, Hà Nội</string>
+    <string name="home_save_job">Lưu việc làm</string>
+    <string name="home_login">Đăng nhập</string>
+    <string name="home_account_title">Tài khoản Jobday</string>
+    <string name="home_account_default_name">Người dùng Jobday</string>
+    <string name="home_account_candidate">Ứng viên</string>
+    <string name="home_account_employer">Nhà tuyển dụng</string>
+    <string name="home_account_admin">Quản trị viên</string>
+    <string name="home_tab_home">Trang chủ</string>
+    <string name="home_tab_profile">Hồ sơ</string>
+    <string name="home_tab_jobs">Việc làm</string>
+    <string name="home_tab_notifications">Thông báo</string>
+    <string name="home_tab_account">Tài khoản</string>
+</resources>

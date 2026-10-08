@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_close">Đóng</string>
+    <string name="auth_back">Quay lại</string>
+    <string name="phone_login_title">Tiếp tục với số điện thoại của bạn</string>
+    <string name="phone_login_description">Khám phá thế giới cơ hội việc làm phù hợp và dễ tiếp cận ngay trong tầm tay của bạn.</string>
+    <string name="phone_number_hint">Số điện thoại</string>
+    <string name="continue_label">Tiếp theo</string>
+    <string name="otp_title">Nhập mã xác nhận OTP</string>
+    <string name="otp_description">Nhập mã bảo mật 6 số vừa được gửi đến số điện thoại %1$s để thực hiện đăng ký</string>
+    <string name="otp_input_description">Nhập mã OTP gồm 6 chữ số</string>
+    <string name="otp_resend_countdown">Gửi lại OTP (%1$02d:%2$02d)</string>
+    <string name="otp_resend">Gửi lại OTP</string>
+    <string name="otp_local">OTP local: %1$s</string>
+    <string name="otp_success">Mã OTP chính xác</string>
+    <string name="candidate_name_title">Nhập Họ và tên</string>
+    <string name="candidate_name_description">Cho chúng tôi biết tên của bạn để Jobday có thể đồng hành hỗ trợ bạn một cách gần gũi và phù hợp nhất.</string>
+    <string name="candidate_name_hint">Nhập tên của bạn</string>
+    <string name="candidate_name_privacy">Được bảo mật theo chính sách của Jobday</string>
+    <string name="candidate_name_success_title">Chúc mừng! Bạn đã tạo tài khoản thành công 🎉</string>
+    <string name="candidate_name_success_description">Hãy bắt đầu hành trình tìm công việc phù hợp và mở ra những cơ hội mới cho chính mình nhé!</string>
+    <string name="candidate_name_success_continue">Tiếp tục</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navigationHome" android:checked="true" android:icon="@drawable/ic_tab_home" android:title="@string/home_tab_home" />
+    <item android:id="@+id/navigationProfile" android:icon="@drawable/ic_tab_doc" android:title="@string/home_tab_profile" />
+    <item android:id="@+id/navigationJobs" android:icon="@drawable/ic_tab_job" android:title="@string/home_tab_jobs" />
+    <item android:id="@+id/navigationNotifications" android:icon="@drawable/ic_tab_noti" android:title="@string/home_tab_notifications" />
+    <item android:id="@+id/navigationAccount" android:icon="@drawable/ic_tab_user" android:title="@string/home_tab_account" />
+</menu>

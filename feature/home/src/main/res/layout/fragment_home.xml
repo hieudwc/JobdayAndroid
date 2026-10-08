@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA">
+
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/homeContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:background="@drawable/bg_home_header"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="18dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_gravity="top"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp"
+                        app:strokeWidth="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_search" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="@string/home_search_hint"
+                                android:textColor="#B2B5BA"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:contentDescription="@string/home_voice_search"
+                                android:src="@drawable/ic_microphone" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="102dp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <LinearLayout
+                        style="@style/HomeQuickAction">
+                        <ImageView
+                            style="@style/HomeQuickActionIcon"
+                            android:src="@drawable/ic_cv" />
+                        <TextView
+                            style="@style/HomeQuickActionLabel"
+                            android:text="@string/home_create_cv" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/HomeQuickAction">
+                        <ImageView
+                            style="@style/HomeQuickActionIcon"
+                            android:src="@drawable/ic_job2" />
+                        <TextView
+                            style="@style/HomeQuickActionLabel"
+                            android:text="@string/home_jobs" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/HomeQuickAction">
+                        <ImageView
+                            style="@style/HomeQuickActionIcon"
+                            android:src="@drawable/ic_company" />
+                        <TextView
+                            style="@style/HomeQuickActionLabel"
+                            android:text="@string/home_company" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/HomeQuickAction">
+                        <ImageView
+                            style="@style/HomeQuickActionIcon"
+                            android:src="@drawable/ic_accessibility" />
+                        <TextView
+                            style="@style/HomeQuickActionLabel"
+                            android:text="@string/home_accessibility" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/nearbyJobsButton"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/home_nearby_jobs"
+                    android:textAllCaps="false"
+                    android:textColor="#1647BE"
+                    android:textStyle="bold"
+                    app:cornerRadius="24dp"
+                    app:icon="@drawable/ic_map"
+                    app:iconGravity="textStart"
+                    app:iconTint="#1647BE"
+                    app:strokeColor="#1647BE"
+                    app:strokeWidth="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/home_suggested_jobs"
+                        android:textColor="#17191C"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_see_all"
+                        android:textColor="#1647BE"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/HomeJobCard">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="140dp">
+
+                        <View
+                            android:id="@+id/jobStripe1"
+                            android:layout_width="3dp"
+                            android:layout_height="0dp"
+                            android:background="#1E5FE2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/companyLogo1"
+                            style="@style/HomeCompanyLogo"
+                            android:text="CV" />
+
+                        <TextView
+                            android:id="@+id/jobTitle1"
+                            style="@style/HomeJobTitle"
+                            android:text="@string/home_job_title_one"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/companyLogo1"
+                            app:layout_constraintTop_toTopOf="@id/companyLogo1" />
+
+                        <TextView
+                            android:id="@+id/companyName1"
+                            style="@style/HomeCompanyName"
+                            android:text="@string/home_company_one"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/jobTitle1"
+                            app:layout_constraintTop_toBottomOf="@id/jobTitle1" />
+
+                        <TextView
+                            android:id="@+id/locationTag1"
+                            style="@style/HomeJobTag"
+                            android:drawableStart="@drawable/ic_location"
+                            android:drawablePadding="4dp"
+                            android:text="@string/home_location_one"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/companyLogo1"
+                            app:layout_constraintTop_toBottomOf="@id/companyLogo1" />
+
+                        <ImageButton
+                            android:id="@+id/saveJobButton1"
+                            style="@style/HomeSaveButton"
+                            app:layout_constraintBottom_toBottomOf="@id/locationTag1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/locationTag1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/HomeJobCard">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="148dp">
+
+                        <View
+                            android:id="@+id/jobStripe2"
+                            android:layout_width="3dp"
+                            android:layout_height="0dp"
+                            android:background="#1E5FE2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/companyLogo2"
+                            style="@style/HomeCompanyLogo"
+                            android:text="HP" />
+
+                        <TextView
+                            android:id="@+id/jobTitle2"
+                            style="@style/HomeJobTitle"
+                            android:text="@string/home_job_title_two"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/companyLogo2"
+                            app:layout_constraintTop_toTopOf="@id/companyLogo2" />
+
+                        <TextView
+                            android:id="@+id/companyName2"
+                            style="@style/HomeCompanyName"
+                            android:text="@string/home_company_two"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/jobTitle2"
+                            app:layout_constraintTop_toBottomOf="@id/jobTitle2" />
+
+                        <LinearLayout
+                            android:id="@+id/tags2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="14dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/saveJobButton2"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                style="@style/HomeJobTagInline"
+                                android:layout_marginEnd="6dp"
+                                android:text="@string/home_remote" />
+
+                            <TextView
+                                style="@style/HomeJobTagInline"
+                                android:drawableStart="@drawable/ic_location"
+                                android:drawablePadding="4dp"
+                                android:text="@string/home_location_two" />
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/saveJobButton2"
+                            style="@style/HomeSaveButton"
+                            app:layout_constraintBottom_toBottomOf="@id/tags2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/tags2" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/HomeJobCard">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="140dp">
+
+                        <View
+                            android:id="@+id/jobStripe3"
+                            android:layout_width="3dp"
+                            android:layout_height="0dp"
+                            android:background="#1E5FE2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/companyLogo3"
+                            style="@style/HomeCompanyLogo"
+                            android:text="BR" />
+
+                        <TextView
+                            android:id="@+id/jobTitle3"
+                            style="@style/HomeJobTitle"
+                            android:text="@string/home_job_title_three"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/companyLogo3"
+                            app:layout_constraintTop_toTopOf="@id/companyLogo3" />
+
+                        <TextView
+                            android:id="@+id/companyName3"
+                            style="@style/HomeCompanyName"
+                            android:text="@string/home_company_three"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/jobTitle3"
+                            app:layout_constraintTop_toBottomOf="@id/jobTitle3" />
+
+                        <TextView
+                            android:id="@+id/locationTag3"
+                            style="@style/HomeJobTag"
+                            android:drawableStart="@drawable/ic_location"
+                            android:drawablePadding="4dp"
+                            android:text="@string/home_location_three"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/companyLogo3"
+                            app:layout_constraintTop_toBottomOf="@id/companyLogo3" />
+
+                        <ImageButton
+                            android:id="@+id/saveJobButton3"
+                            style="@style/HomeSaveButton"
+                            app:layout_constraintBottom_toBottomOf="@id/locationTag3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/locationTag3" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/accountContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/loggedOutContent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/loginButton"
+                    android:layout_width="220dp"
+                    android:layout_height="52dp"
+                    android:text="@string/home_login"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:backgroundTint="#1647BE"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/loggedInContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:background="@drawable/bg_account_avatar"
+                    android:padding="24dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_tab_user"
+                        app:tint="#1647BE" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/home_account_title"
+                    android:textColor="#6B7280"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/accountNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:textColor="#111827"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/accountPhoneTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#4B5563"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/accountTypeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_account_type"
+                    android:textColor="#1647BE"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@android:color/white"
+        android:elevation="12dp"
+        app:itemActiveIndicatorStyle="@style/HomeBottomNavigationActiveIndicator"
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/home_bottom_navigation_item"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemTextColor="@color/home_bottom_navigation_item"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/home_bottom_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

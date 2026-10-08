@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Jobday</string>
+    <string name="welcome_logo_description">Logo Jobday</string>
+    <string name="welcome_explore">Khám phá ngay</string>
+    <string name="welcome_employer_login">Đăng nhập với vai trò nhà tuyển dụng</string>
+</resources>
